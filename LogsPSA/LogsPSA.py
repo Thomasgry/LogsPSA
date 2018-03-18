@@ -19,8 +19,13 @@ __all__ = ['LogsPSA']
 class LogsPSA:
 	"Definition d une classe de logs pour PSA"
 	
-	def __init__(self,log=None,path=os.environ.get('PYTHONLOGS'),d=0):
+	def __init__(self,log=None,path=None,d=0):
 		self.debug			= d
+		if path is None :
+			if os.environ.get('PYTHONLOGS') is not None:
+				path = os.environ.get('PYTHONLOGS')
+			else:
+				path=".\\"
 		## verification affection log file name
 		if log is None:
 			raise Exception('option "log" (file name) is required')
