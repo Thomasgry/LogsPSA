@@ -3,9 +3,9 @@ LogsPSA - Custom log message implementation
 
 THis module helps to store logs message easily.
 
-You can install with pip:
+You can install with:
 	
-	pip install LogsPSA
+	python setup.py install
 
 Use case :
 
