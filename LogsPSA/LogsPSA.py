@@ -25,7 +25,7 @@ class LogsPSA:
 			if os.environ.get('PYTHONLOGS') is not None:
 				path = os.environ.get('PYTHONLOGS')
 			else:
-				path=".\\"
+				path=os.getcwd()
 		## verification affection log file name
 		if log is None:
 			raise Exception('option "log" (file name) is required')
